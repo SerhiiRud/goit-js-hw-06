@@ -7,16 +7,16 @@ const ingredients = [
   "Condiments",
 ];
 
-const list = document.querySelector("#ingredients");
+const listEl = document.querySelector("#ingredients");
 
 ingredients.map((ingredient) => {
   const listItem = document.createElement("li");
   listItem.textContent = ingredient;
   listItem.classList.add("item");
-  list.append(listItem);
+  listEl.append(listItem);
 });
 
 // const listElements = ingredients
 //   .map((ingredient) => `<li>${ingredient}</li>`)
 //   .join("");
-// list.insertAdjacentHTML("beforebegin", listElements);
+// listEl.insertAdjacentHTML("beforebegin", listElements);

@@ -1,16 +1,16 @@
-const inputForm = document.querySelector("#validation-input");
+const inputFormEl = document.querySelector("#validation-input");
 
 const borderSwitcher = () => {
   if (
-    Number(inputForm.value.length) ===
-    Number(inputForm.getAttribute("data-length"))
+    Number(inputFormEl.value.length) ===
+    Number(inputFormEl.getAttribute("data-length"))
   ) {
-    inputForm.classList.remove("invalid");
-    inputForm.classList.add("valid");
+    inputFormEl.classList.remove("invalid");
+    inputFormEl.classList.add("valid");
   } else {
-    inputForm.classList.remove("valid");
-    inputForm.classList.add("invalid");
+    inputFormEl.classList.remove("valid");
+    inputFormEl.classList.add("invalid");
   }
 };
 
-inputForm.addEventListener("blur", borderSwitcher);
+inputFormEl.addEventListener("blur", borderSwitcher);

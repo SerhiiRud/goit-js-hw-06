@@ -13,13 +13,13 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector(".gallery");
+const galleryEl = document.querySelector(".gallery");
 
 const markup = images
   .map((image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`)
   .join("");
 
-gallery.insertAdjacentHTML("beforeend", markup);
-gallery.style.display = "flex";
-gallery.style.listStyle = "none";
-gallery.style.gap = "30px";
+galleryEl.insertAdjacentHTML("beforeend", markup);
+galleryEl.style.display = "flex";
+galleryEl.style.listStyle = "none";
+galleryEl.style.gap = "30px";
