@@ -8,13 +8,14 @@ const ingredients = [
 ];
 
 const listEl = document.querySelector("#ingredients");
-
+const tempRepo = [];
 ingredients.map((ingredient) => {
   const listItem = document.createElement("li");
   listItem.textContent = ingredient;
   listItem.classList.add("item");
-  listEl.append(listItem);
+  tempRepo.push(listItem);
 });
+listEl.append(...tempRepo);
 
 // const listElements = ingredients
 //   .map((ingredient) => `<li>${ingredient}</li>`)
